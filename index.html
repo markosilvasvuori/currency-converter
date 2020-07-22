@@ -8,31 +8,98 @@
 
     <body>
         <div class="wrapper">
-            <div id="currency-converter">
-                <div class="top">
-                    <input type="number" id="top-input">
-                    <select id="top-currency">
-                        <option>USD</option>
-                        <option>EUR</option>
-                        <option>CAD</option>
-                        <option>AUS</option>
-                    </select>
-                    <div class="icon-container">
-                        <img class="converter-icon" src="img/converter-icon.svg" alt="icon">
-                    </div>
-                </div>
-
-                <div class="bottom">
-                    <input type="number" id="bottom-input">
-                    <select id="bottom-currency">
-                        <option>USD</option>
-                        <option>EUR</option>
-                        <option>CAD</option>
-                        <option>AUS</option>
-                    </select>
-                </div>
+            <div id="left-col">
+                <h2>Simple <br> currency <br> converter.</h2>
             </div>
-        </div>
+            <div id="right-col">
+                <div id="currency-converter">
+                    <div class="top">
+                        <input type="number" id="top-input" oninput="convert()">
+                        <select id="top-currency" onchange="updateCurrencies()">
+                            <option>EUR</option>
+                            <option>USD</option>
+                            <option>CAD</option>
+                            <option>AUD</option>
+                            <option>GBP</option>
+                            <option>JPY</option>
+                            <option>CHF</option>
+                            <option>CNY</option>
+                            <option>BGN</option>
+                            <option>CZK</option>
+                            <option>DKK</option>
+                            <option>GBP</option>
+                            <option>HUF</option>
+                            <option>PLN</option>
+                            <option>RON</option>
+                            <option>SEK</option>
+                            <option>ISK</option>
+                            <option>NOK</option>
+                            <option>HRK</option>
+                            <option>RUB</option>
+                            <option>TRY</option>
+                            <option>BRL</option>
+                            <option>CNY</option>
+                            <option>HKD</option>
+                            <option>IDR</option>
+                            <option>ILS</option>
+                            <option>INR</option>
+                            <option>KRW</option>
+                            <option>MXN</option>
+                            <option>MYR</option>
+                            <option>NZD</option>
+                            <option>PHP</option>
+                            <option>SGD</option>
+                            <option>THB</option>
+                            <option>ZAR</option>
+                        </select>
+                        <div class="icon-container" onclick="swapCurrencies()">
+                            <img class="converter-icon" src="img/converter-icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <input type="number" id="bottom-input" disabled>
+                        <select id="bottom-currency" onchange="updateCurrencies()" oninput="convert()">
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>CAD</option>
+                            <option>AUD</option>
+                            <option>GBP</option>
+                            <option>JPY</option>
+                            <option>CHF</option>
+                            <option>CNY</option>
+                            <option>BGN</option>
+                            <option>CZK</option>
+                            <option>DKK</option>
+                            <option>GBP</option>
+                            <option>HUF</option>
+                            <option>PLN</option>
+                            <option>RON</option>
+                            <option>SEK</option>
+                            <option>ISK</option>
+                            <option>NOK</option>
+                            <option>HRK</option>
+                            <option>RUB</option>
+                            <option>TRY</option>
+                            <option>BRL</option>
+                            <option>CNY</option>
+                            <option>HKD</option>
+                            <option>IDR</option>
+                            <option>ILS</option>
+                            <option>INR</option>
+                            <option>KRW</option>
+                            <option>MXN</option>
+                            <option>MYR</option>
+                            <option>NZD</option>
+                            <option>PHP</option>
+                            <option>SGD</option>
+                            <option>THB</option>
+                            <option>ZAR</option>
+                        </select>
+                    </div>
+                </div> <!-- /#currency-converter -->
+            </div> <!-- /#right-col -->
+        </div> <!-- /.wrapper -->
         <script src="js/script.js"></script>
     </body>
 </html>
